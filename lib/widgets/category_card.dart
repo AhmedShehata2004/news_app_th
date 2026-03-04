@@ -10,7 +10,6 @@ class CategoryCard extends StatelessWidget {
       height: 85,
       width: 160,      
       decoration: BoxDecoration(
-        color: Colors.red,
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(image: AssetImage(categoryModel.image), fit: BoxFit.fill),
       ),
