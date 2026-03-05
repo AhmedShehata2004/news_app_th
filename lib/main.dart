@@ -10,11 +10,6 @@ class NewsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:  NewsView(),
-     
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: NewsView());
   }
 }
-
