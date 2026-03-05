@@ -17,7 +17,8 @@ class NewsTile extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               image: DecorationImage(
-                image: AssetImage(articalModel.imageUrl),
+                // need to change this to use the image url from the artical model and handle the case where the image url is null
+                image: articalModel.imageUrl != null ? NetworkImage(articalModel.imageUrl!) : AssetImage('assets/business.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -31,7 +32,7 @@ class NewsTile extends StatelessWidget {
             ),
           const SizedBox(height: 4),
           Text(
-            articalModel.description,
+           articalModel.description!= null ? articalModel.description! : 'No description available',
             maxLines: 2,
             style: TextStyle(fontSize: 14, color: Colors.grey[600]),
           ),

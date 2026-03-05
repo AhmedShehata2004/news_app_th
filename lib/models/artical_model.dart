@@ -1,7 +1,7 @@
 class ArticalModel {
   final String title;
-  final String description;
-  final String imageUrl;
+  final String ? description;
+  final String ? imageUrl;
 
   ArticalModel({
     required this.title,
