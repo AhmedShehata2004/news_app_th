@@ -25,9 +25,11 @@ class CategoriesListview extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 16.0),
-              child: CategoryCard(
-                categoryModel: categories[index],
-              ),
+              
+                child: CategoryCard(
+                  categoryModel: categories[index],
+                ),
+            
             );
           },
         ),

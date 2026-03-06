@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_th/widgets/categories_listview.dart';
-import 'package:news_app_th/widgets/news_sliver_view.dart';
+import 'package:news_app_th/widgets/news_listview_builder.dart';
 
 class NewsView extends StatelessWidget {
   NewsView({super.key});
@@ -13,7 +13,7 @@ class NewsView extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(child: CategoriesListview()),
-          NewsSliverView(),
+          newListViewBuilder( categoryName: "general"),
         ],
       ),
     );
