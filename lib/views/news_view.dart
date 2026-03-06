@@ -13,7 +13,7 @@ class NewsView extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(child: CategoriesListview()),
-          newListViewBuilder(),
+          newListViewBuilder( categoryName: "general"),
         ],
       ),
     );

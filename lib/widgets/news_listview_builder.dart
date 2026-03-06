@@ -5,7 +5,9 @@ import 'package:news_app_th/services/news_services.dart';
 import 'package:news_app_th/widgets/news_sliver_view.dart';
 
 class newListViewBuilder extends StatefulWidget {
-  newListViewBuilder({super.key});
+  newListViewBuilder({super.key,required this.categoryName});
+   final String categoryName;
+
 
   @override
   State<newListViewBuilder> createState() => _newListViewBuilderState();
@@ -18,7 +20,7 @@ class _newListViewBuilderState extends State<newListViewBuilder> {
   @override
   void initState() {
     super.initState();
-    future = NewsServices(Dio()).getGeneralNews();
+    future = NewsServices(Dio()).getTopHeadLines(category: widget.categoryName);
   }
 
   @override
